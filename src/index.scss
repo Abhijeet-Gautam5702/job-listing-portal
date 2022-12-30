@@ -1,0 +1,123 @@
+@mixin setBorder($color: black) {
+  border: 2px solid $color;
+  border-radius: 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'League Spartan', sans-serif;
+  font-size:0.9rem;
+}
+
+.app {
+  @include setBorder(black);
+  width: 70%;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.card {
+  @include setBorder(red);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px;
+  margin: 15px 0px;
+
+  .logo-contnr {
+    min-width: 50px;
+    width: 60px;
+    @include setBorder(blue);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .job-details-contnr {
+    @include setBorder(green);
+    margin-left: 10px;
+    margin-right: auto;
+
+    .card--header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      .header-element {
+        margin-right: 5px;
+        padding: 5px 7px;
+        border-radius: 5px;
+        font-size: 0.8rem;
+      }
+      .company {
+        padding-left:0;
+        font-weight: 600;
+        font-size: 1rem;
+      }
+      .new-label {
+        background-color: blue;
+        color: white;
+      }
+      .featured-label {
+        background-color: black;
+        color: white;
+      }
+    }
+
+    .job-profile{
+        font-size:1.1rem;
+        font-weight: 600;
+    }
+  }
+
+  .tags-contnr {
+    @include setBorder(black);
+    width: 40%;
+    margin-left: 10px;
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: flex-end;
+
+    .tag{
+        @include setBorder(red);
+        background-color:antiquewhite;
+        font-size:0.7rem;
+        padding:5px;
+        margin:3px;
+    }
+  }
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 565px) {
+  .app {
+    width: 90%;
+  }
+}
+
+@media (max-width: 425px) {
+  .app {
+    width: 90%;
+  }
+  .card {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .job-details-contnr {
+      margin-left: 0px;
+    }
+
+    .tags-contnr {
+      margin-left: 0px;
+      width:100%;
+      justify-content: flex-start;
+    }
+  }
+}
