@@ -25,19 +25,25 @@ body {
 
 .filter {
   width: 100%;
+  min-height: 56px;
   @include setBorder(black);
-  padding: 15px 10px;
+  padding: 10px;
   background-color: white;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
 
   .filter-tag {
+    @include setBorder(black);
     width: fit-content;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    @include setBorder(black);
     overflow: hidden;
-    
+    margin: 3px 5px;
+
     .filter-text {
       background-color: #ffff8f;
       padding: 5px;
@@ -47,7 +53,7 @@ body {
       background-color: white;
       width: 20px;
       height: auto;
-      padding:3px;
+      padding: 3px;
       cursor: pointer;
 
       img {
@@ -105,17 +111,20 @@ body {
         text-align: center;
         border-radius: 50px;
       }
+
       .company {
         padding-left: 0;
         font-weight: 600;
         font-size: 1rem;
       }
+
       .new-label {
         background-color: #002bc9;
         color: white;
         font-size: 0.65rem;
         font-weight: bolder;
       }
+
       .featured-label {
         background-color: black;
         color: white;
@@ -128,6 +137,11 @@ body {
       font-size: 1.1rem;
       font-weight: 600;
       margin: 5px 0px;
+      cursor: pointer;
+    }
+    .job-profile:hover {
+      color: #002bc9;
+      transition: 0.2s;
     }
 
     .other-details {
@@ -140,6 +154,7 @@ body {
         margin: 0px 3px;
         font-size: 0.8rem;
       }
+
       .post-day {
         margin-left: 0px;
       }
@@ -155,7 +170,7 @@ body {
     justify-content: flex-end;
 
     .tag {
-      // @include setBorder(red);
+      @include setBorder(black);
       border-radius: 5px;
       background-color: #fcffc5;
       font-size: 0.8rem;
@@ -171,6 +186,10 @@ body {
       transition: 0.3s;
     }
   }
+}
+.card:hover{
+  transform: scale(1.05);
+  transition: 0.3s;
 }
 
 .hide {

@@ -21,7 +21,7 @@ export default [
     location:"Remote",
     postDay: 1,
     isFeatured: false,
-    tags: ["junior", "HTML", "CSS", "full-time"],
+    tags: ["junior", "HTML", "CSS", "part-time","Vue"],
   },
   {
     company: {
@@ -33,6 +33,6 @@ export default [
     location:"Netherlands",
     postDay: 3,
     isFeatured: false,
-    tags: ["junior", "HTML", "CSS", "full-time"],
+    tags: ["senior","contract","remote","CSS","React","Javascript"],
   },
 ];

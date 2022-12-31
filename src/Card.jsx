@@ -1,15 +1,20 @@
 import React from "react";
 
 function Card(props) {
-  const { data } = props;
+  const { data, filterTagsArray, handleClick } = props;
+
+  function tmpFunc() {
+    window.alert("Please try again later");
+    console.log("HERE!!");
+  }
+
   const tagElements = data.tags.map((tag) => {
     return (
-      <p key={tag} className="tag">
+      <p key={tag} className="tag" onClick={handleClick}>
         {tag}
       </p>
     );
   });
-
   return (
     <div className="card">
       <div className="logo-contnr">
@@ -19,13 +24,21 @@ function Card(props) {
         <div className="card--header">
           <p className="company header-element">{data.company.name}</p>
 
-          {data.postDay <= 2 && <p className="new-label header-element">NEW</p>}
+          {
+            /* conditionally render new-label is post is <=2 days old */
+            data.postDay <= 2 && <p className="new-label header-element">NEW</p>
+          }
 
-          {data.isFeatured && (
-            <p className="featured-label header-element">FEATURED</p>
-          )}
+          {
+            /* conditional render feature-label */
+            data.isFeatured && (
+              <p className="featured-label header-element">FEATURED</p>
+            )
+          }
         </div>
-        <p className="job-profile">{data.profile}</p>
+        <p className="job-profile" onClick={tmpFunc}>
+          {data.profile}
+        </p>
         <div className="other-details">
           <p className="post-day detail">{data.postDay}d ago</p>•
           <p className="contract detail">{data.contract}</p>•
