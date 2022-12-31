@@ -7,30 +7,76 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'League Spartan', sans-serif;
-  font-size:0.9rem;
+  font-family: "League Spartan", sans-serif;
+  font-size: 0.9rem;
+}
+body {
+  background-color: #ffff8f;
+  // background-color: #FFFDD0;
+  // background-color: #ffe1a8;
 }
 
 .app {
-  @include setBorder(black);
+  // @include setBorder(black);
   width: 70%;
   margin: 20px auto;
   padding: 10px;
 }
 
+.filter {
+  width: 100%;
+  @include setBorder(black);
+  padding: 15px 10px;
+  background-color: white;
+
+  .filter-tag {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    @include setBorder(black);
+    overflow: hidden;
+    
+    .filter-text {
+      background-color: #ffff8f;
+      padding: 5px;
+    }
+    .dlt-filter {
+      // @include setBorder(black);
+      background-color: white;
+      width: 20px;
+      height: auto;
+      padding:3px;
+      cursor: pointer;
+
+      img {
+        display: block;
+        width: 100%;
+        // width:15px;
+        height: auto;
+      }
+    }
+  }
+}
+
 .card {
-  @include setBorder(red);
+  // @include setBorder(red);
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 5px 5px 8px gray;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  padding: 5px;
+  padding: 10px;
   margin: 15px 0px;
 
   .logo-contnr {
     min-width: 50px;
     width: 60px;
-    @include setBorder(blue);
+    // margin-right:10px;
+    // @include setBorder(blue);
 
     img {
       width: 100%;
@@ -39,59 +85,96 @@
   }
 
   .job-details-contnr {
-    @include setBorder(green);
+    // @include setBorder(green);
+    width: fit-content;
+    min-width: 40%;
     margin-left: 10px;
     margin-right: auto;
 
     .card--header {
       display: flex;
       flex-direction: row;
-      align-items: center;
-      justify-content: center;
+      align-items: baseline;
+      justify-content: flex-start;
+      width: fit-content;
 
       .header-element {
         margin-right: 5px;
-        padding: 5px 7px;
+        padding: 3px 7px;
         border-radius: 5px;
-        font-size: 0.8rem;
+        text-align: center;
+        border-radius: 50px;
       }
       .company {
-        padding-left:0;
+        padding-left: 0;
         font-weight: 600;
         font-size: 1rem;
       }
       .new-label {
-        background-color: blue;
+        background-color: #002bc9;
         color: white;
+        font-size: 0.65rem;
+        font-weight: bolder;
       }
       .featured-label {
         background-color: black;
         color: white;
+        font-size: 0.65rem;
+        font-weight: bolder;
       }
     }
 
-    .job-profile{
-        font-size:1.1rem;
-        font-weight: 600;
+    .job-profile {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 5px 0px;
+    }
+
+    .other-details {
+      // @include setBorder(cyan);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      .detail {
+        margin: 0px 3px;
+        font-size: 0.8rem;
+      }
+      .post-day {
+        margin-left: 0px;
+      }
     }
   }
 
   .tags-contnr {
-    @include setBorder(black);
-    width: 40%;
+    // @include setBorder(black);
+    width: fit-content;
     margin-left: 10px;
     display: flex;
-    flex-flow:row wrap;
+    flex-flow: row wrap;
     justify-content: flex-end;
 
-    .tag{
-        @include setBorder(red);
-        background-color:antiquewhite;
-        font-size:0.7rem;
-        padding:5px;
-        margin:3px;
+    .tag {
+      // @include setBorder(red);
+      border-radius: 5px;
+      background-color: #fcffc5;
+      font-size: 0.8rem;
+      padding: 7px;
+      margin: 4px;
+      margin-left: 0px;
+      cursor: pointer;
+    }
+    .tag:hover {
+      font-weight: bold;
+      background-color: #ffff8f;
+      transform: scale(1.1);
+      transition: 0.3s;
     }
   }
+}
+
+.hide {
+  display: none;
 }
 
 /* MEDIA QUERIES */
@@ -101,10 +184,7 @@
   }
 }
 
-@media (max-width: 425px) {
-  .app {
-    width: 90%;
-  }
+@media (max-width: 445px) {
   .card {
     flex-direction: column;
     justify-content: flex-start;
@@ -112,11 +192,13 @@
 
     .job-details-contnr {
       margin-left: 0px;
+      margin-top: 5px;
+      margin-bottom: 5px;
     }
 
     .tags-contnr {
       margin-left: 0px;
-      width:100%;
+      width: 100%;
       justify-content: flex-start;
     }
   }
