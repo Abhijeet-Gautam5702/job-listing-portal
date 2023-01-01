@@ -35,6 +35,13 @@ function App() {
     setFilterTagsArr((prevFilterArr) => newArray);
   }
 
+  /*
+  handles click-event: clears filterTagsArr when "Clear all"-button is clicked
+  */
+  function clearFilterArr() {
+    setFilterTagsArr((prevFilterArr) => []);
+  }
+
   const cardElements = jobData.map((item) => {
     //check if current job-role satisfies all filter-tags
     const toShowCard = filterTagsArr.every((filterTag) =>
@@ -48,14 +55,18 @@ function App() {
           key={Math.random()}
           data={item}
           filterTagsArray={filterTagsArr}
-          handleClick={addToFilterArr}
+          handleAddClick={addToFilterArr}
         />
       )
     );
   });
   return (
     <div className="app">
-      <Filter data={filterTagsArr} handleClick={removeFromFilterArr} />
+      <Filter
+        data={filterTagsArr}
+        handleRemoveClick={removeFromFilterArr}
+        handleClearClick={clearFilterArr}
+      />
       {cardElements}
     </div>
   );

@@ -8,11 +8,14 @@ export default function Filter(props) {
       <div key={item} className="filter-tag">
         <p className="filter-text">{item}</p>
         <div className="dlt-filter">
-          <img src={dltIcon} alt="dlt" onClick={props.handleClick} />
+          <img src={dltIcon} alt="dlt" onClick={props.handleRemoveClick} />
         </div>
       </div>
     );
   });
 
-  return <div className="filter">{tagsElements}</div>;
+  return (<div className="filter">
+    {tagsElements}
+    <button className="clear" onClick={props.handleClearClick}>Clear all</button>
+  </div>);
 }

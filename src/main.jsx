@@ -5,6 +5,10 @@ import "./index.scss";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <div className="background-banner">
+
+    </div>
     <App />
   </React.StrictMode>
 );
+

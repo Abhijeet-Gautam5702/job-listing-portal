@@ -10,23 +10,40 @@
   font-family: "League Spartan", sans-serif;
   font-size: 0.9rem;
 }
+
 body {
-  background-color: #ffff8f;
+  background-color: #ffe3cf;
+  position:relative;
   // background-color: #FFFDD0;
   // background-color: #ffe1a8;
+}
+
+.background-banner{
+  background-image: url(./assets/banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width:100%;
+  height:100px;
 }
 
 .app {
   // @include setBorder(black);
   width: 70%;
   margin: 20px auto;
+  position:absolute;
+  top:40px;
+  left:50%;
+  transform: translate(-50%,0);
   padding: 10px;
 }
 
 .filter {
+  @include setBorder(black);
+  // border-radius:5px;
+  // box-shadow: 3px 3px 8px gray;
   width: 100%;
   min-height: 56px;
-  @include setBorder(black);
   padding: 10px;
   background-color: white;
   display: flex;
@@ -35,7 +52,9 @@ body {
   align-items: center;
 
   .filter-tag {
-    @include setBorder(black);
+    // @include setBorder(black);
+    border-radius:5px;
+    box-shadow: 2px 2px black;
     width: fit-content;
     display: flex;
     flex-direction: row;
@@ -45,9 +64,12 @@ body {
     margin: 3px 5px;
 
     .filter-text {
-      background-color: #ffff8f;
+      background-color:#ffe3cf;
+      color:#de0f3f;
+      font-weight:bolder;
       padding: 5px;
     }
+
     .dlt-filter {
       // @include setBorder(black);
       background-color: white;
@@ -63,6 +85,19 @@ body {
         height: auto;
       }
     }
+  }
+
+  .clear{
+    padding:5px;
+    margin-left:auto;
+    cursor:pointer;
+    background-color:white;
+    font-weight: bold;
+    border:none;
+  }
+  .clear:hover{
+    color:#de0f3f;
+    transition: 0.2s;
   }
 }
 
@@ -139,10 +174,6 @@ body {
       margin: 5px 0px;
       cursor: pointer;
     }
-    .job-profile:hover {
-      color: #002bc9;
-      transition: 0.2s;
-    }
 
     .other-details {
       // @include setBorder(cyan);
@@ -170,12 +201,16 @@ body {
     justify-content: flex-end;
 
     .tag {
-      @include setBorder(black);
-      border-radius: 5px;
-      background-color: #fcffc5;
+      // @include setBorder(black);
+      border-radius:5px;
+      box-shadow: 2px 2px black;
+      background-color:#ffe3cf;
+      color:#de0f3f;
+      font-weight:bolder;
       font-size: 0.8rem;
       padding: 7px;
       margin: 4px;
+      margin-right:6px;
       margin-left: 0px;
       cursor: pointer;
     }
@@ -190,6 +225,10 @@ body {
 .card:hover{
   transform: scale(1.05);
   transition: 0.3s;
+
+  .job-profile{
+    color:#002bc9;
+  }
 }
 
 .hide {

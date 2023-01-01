@@ -1,16 +1,15 @@
 import React from "react";
 
 function Card(props) {
-  const { data, filterTagsArray, handleClick } = props;
+  const { data, filterTagsArray, handleAddClick } = props;
 
   function tmpFunc() {
     window.alert("Please try again later");
-    console.log("HERE!!");
   }
 
   const tagElements = data.tags.map((tag) => {
     return (
-      <p key={tag} className="tag" onClick={handleClick}>
+      <p key={tag} className="tag" onClick={handleAddClick}>
         {tag}
       </p>
     );
