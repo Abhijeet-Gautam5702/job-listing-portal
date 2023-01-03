@@ -22,3 +22,9 @@ https://static-job-listing-portal.netlify.app/
 
 
 
+
+## Screenshots
+
+![App Desktop Screenshot](https://i.postimg.cc/bdDyfk7C/ss-desktop.png[/img][/url ) 
+
+![App Mobile Screenshot](https://i.postimg.cc/qgPkJg0k/ss-mobile.png[/img][/url)
