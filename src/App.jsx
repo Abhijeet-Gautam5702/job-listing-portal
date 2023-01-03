@@ -8,12 +8,16 @@ function App() {
   const [filterTagsArr, setFilterTagsArr] = useState([]);
 
   /*
-  handles click-event: adds tag to filterTagsArr when any tag (of any card) is clicked
+  handles click-event: adds unique tag to filterTagsArr when any tag (of any card) is clicked
   */
   function addToFilterArr(e) {
     const newTag = e.currentTarget.textContent;
     setFilterTagsArr((prevFilterArr) => {
-      return [...prevFilterArr, newTag];
+      //if the newTag is not present in the filterArr already, then add it
+      if (!prevFilterArr.includes(newTag)) {
+        return [...prevFilterArr, newTag];
+      }
+      return prevFilterArr;
     });
   }
 

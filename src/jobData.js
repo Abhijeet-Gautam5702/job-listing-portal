@@ -7,9 +7,9 @@ export default [
     profile:"Full stack developer",
     contract: "Full time",
     location:"USA",
-    postDay: 2,
+    postDay: 3,
     isFeatured: true,
-    tags: ["senior", "HTML", "CSS", "Javascript", "remote", "full-time"],
+    tags: ["Senior", "HTML", "CSS", "Javascript", "Remote", "Full-time"],
   },
   {
     company: {
@@ -21,7 +21,7 @@ export default [
     location:"Remote",
     postDay: 1,
     isFeatured: false,
-    tags: ["junior", "HTML", "CSS", "part-time","Vue"],
+    tags: ["Junior", "HTML", "CSS", "Part-time","Vue"],
   },
   {
     company: {
@@ -33,6 +33,54 @@ export default [
     location:"Netherlands",
     postDay: 3,
     isFeatured: false,
-    tags: ["senior","contract","remote","CSS","React","Javascript"],
+    tags: ["React","Sass","Javascript","Frontend","Junior"],
+  },
+  {
+    company: {
+      name: "PayTM",
+      logo: "https://img.icons8.com/color/512/paytm.png",
+    },
+    profile:"Frontend engineer",
+    contract: "Full time",
+    location:"UK only",
+    postDay: 1,
+    isFeatured: false,
+    tags: ["Senior","Contract","Remote","CSS","Angular","Javascript","Vue"],
+  },
+  {
+    company: {
+      name: "Spotify",
+      logo: "https://img.icons8.com/fluency/512/spotify.png",
+    },
+    profile:"Backend engineer",
+    contract: "Remote",
+    location:"Netherlands",
+    postDay: 5,
+    isFeatured: true,
+    tags: ["Mid-level","Fullstack","Ruby","Javascript","CSS"],
+  },
+  {
+    company: {
+      name: "Uber Eats",
+      logo: "https://img.icons8.com/color/512/uber-eats-app.png",
+    },
+    profile:"Fullstack developer",
+    contract: "Remote",
+    location:"USA",
+    postDay: 2,
+    isFeatured: true,
+    tags: ["Python","Django","React","Sass","Fullstack"],
+  },
+  {
+    company: {
+      name: "Uber",
+      logo: "https://img.icons8.com/color/512/uber-app.png",
+    },
+    profile:"Junior frontend engineer",
+    contract: "Remote",
+    location:"Netherlands",
+    postDay: 4,
+    isFeatured: false,
+    tags: ["Junior","HTML","Sass","CSS","Tailwind CSS","Angular","Javascript"],
   },
 ];
